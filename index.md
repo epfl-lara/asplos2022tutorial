@@ -1,7 +1,7 @@
 # Verifying Programs with Stainless ASPLOS 2022
 
 ## About the tutorial
-[Stainless](https://stainless.epfl.ch/) is a system for constructing formally-verified software
+[Stainless](https://stainless.epfl.ch/) is an [open-source system](https://github.com/epfl-lara/stainless) for constructing formally-verified software
 that is guaranteed to meet specifications for all inputs.
 The primary input format to Stainless is a subset of [Scala](https://www.scala-lang.org/).
 In addition, programs designed to run with pre-allocated memory (e.g., on an embedded system)
@@ -12,21 +12,23 @@ series of guided examples. We will assume only basic programming skills; no
 particular background in verification or Scala is required, though a basic
 understanding of functional programming concepts will be helpful.
 
+To get the basic flavor of Stainless, you can also consult the documentation including [this basic tutorial](https://epfl-lara.github.io/stainless/tutorial.html) or [watch a keynote from Lambda Days](https://www.youtube.com/watch?v=dkO59PTcNxA). The tutorial will also cover examples not presented previously that illustrate some of the recent features.
+
 ## Location and date
-**Location:** [Swiss Tech Convention Center](https://www.stcc.ch/) near the campus of EPFL in Lausanne, Switzerland.
+**Location:** [Swiss Tech Convention Center](https://www.stcc.ch/) near the campus of EPFL in Lausanne, Switzerland ([M1 Metro stop EPFL](https://goo.gl/maps/A3Sm4VGxWsoPrzX27))
 
 **Time:** Tuesday, March 1st, afternoon
 
 ## Setup
 
-TBD
+[Installation for Scala 3 front end version of Stainless](https://github.com/epfl-lara/stainless/blob/scala-3.x/core/src/sphinx/installation.rst)
 
 ## Program Schedule
 
-| Time     | Topic                            | Resources |
-|----------|----------------------------------|-----------|
-| TBD      | Basics of Stainless              | TBD       |
-| TBD      | Verifying imperative code        | TBD       |
-| TBD      | Proof control                    | TBD       |
-| TBD      | An Extended Verification Example | TBD       |
-| TBD      | Outlook                          | TBD       |
+| Time     | Topic                            |
+|----------|----------------------------------|
+|afternoon | Basics of Stainless              |
+|          | Verifying imperative code        |
+|          | Proof control                    |
+|          | An Extended Verification Example |
+|          | Features, Tips, and Case Studies |
