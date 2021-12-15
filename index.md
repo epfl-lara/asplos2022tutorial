@@ -26,7 +26,7 @@ TBD
 | Time     | Topic                            | Resources |
 |----------|----------------------------------|-----------|
 | TBD      | Basics of Stainless              | TBD       |
-| TBD      | Proof control                    | TBD       |
 | TBD      | Verifying imperative code        | TBD       |
+| TBD      | Proof control                    | TBD       |
 | TBD      | An Extended Verification Example | TBD       |
 | TBD      | Outlook                          | TBD       |
