@@ -1,4 +1,4 @@
-# Verifying Programs with Stainless ASPLOS 2022
+# Verifying Programs with Stainless
 
 ## About the tutorial
 [Stainless](https://stainless.epfl.ch/) is an [open-source system](https://github.com/epfl-lara/stainless) for constructing formally-verified software

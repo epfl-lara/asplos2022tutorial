@@ -1,4 +1,4 @@
-# Verifying Programs with Stainless ASPLOS 2022
+# Verifying Programs with Stainless
 
 ## About the tutorial
 
