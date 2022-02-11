@@ -17,7 +17,7 @@ To get the basic flavor of Stainless, you can also consult the documentation inc
 ## Location and date
 **Location:** [Swiss Tech Convention Center](https://www.stcc.ch/) near the campus of EPFL in Lausanne, Switzerland ([M1 Metro stop EPFL](https://goo.gl/maps/A3Sm4VGxWsoPrzX27))
 
-**Time:** Tuesday, March 1st, afternoon
+**Time:** Tuesday, March 1st, morning
 
 ## Setup
 
@@ -25,10 +25,10 @@ To get the basic flavor of Stainless, you can also consult the documentation inc
 
 ## Program Schedule
 
-| Time     | Topic                            |
-|----------|----------------------------------|
-|afternoon | Basics of Stainless              |
-|          | Verifying imperative code        |
-|          | Proof control                    |
-|          | An Extended Verification Example |
-|          | Features, Tips, and Case Studies |
+| Time   | Topic                            |
+|--------|----------------------------------|
+|morning | Basics of Stainless              |
+|        | Verifying imperative code        |
+|        | Proof control                    |
+|        | An Extended Verification Example |
+|        | Features, Tips, and Case Studies |
