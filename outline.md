@@ -30,17 +30,24 @@
   - Basic data in QOI example, e.g., RGBA value manipulation and bit-twiddling
   - Prove some simple properties about `fromRGBA` and `incremented`
 
-## More examples? (Viktor)
+## break 15 min, around 10am
 
-*TBD*
+## More examples? (Viktor)
+  - examples from FMCAD
+      * diffs (fold version)
+      * amortized queue
+      * binary search and google bug
+  - current strengths of Stainless and comparison to other tools
+
+## official BREAK at 11am
 
 ## How Stainless works (Nicolas)
 
-*TBD*
+*TBD*, see Google slides
 
-## Bigger development (Mario)
+## Bigger development (Mario): at noon
 
-*TBD*
+
 
 ## Conclusion?
 
