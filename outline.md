@@ -18,7 +18,6 @@
   - What one might want to verify about it
     - The usual: memory/OOB safety
     - A strong property: encode and decode are inverse of another
-  - We will start
 - Installation of Stainless
   - Explain what's part of the package
   - Point to releases for Linux and OSX (use WSL for Windows)
