@@ -46,8 +46,16 @@
 *TBD*, see Google slides
 
 ## Bigger development (Mario): at noon
-
-
+  - Small demonstration with GenC: conversion from .png to .qoi and .qoi to .png
+    - Briefly mention that the GenC version is ~15-20% slowing in decoding and ~35-40% in encoding compared to the reference implementation.
+  - Quick overview of the structure of the project
+  - Show the main result: `decode . encode = id`
+    - Have an overview of the proofs (e.g. lemmas, and that functions related to encoding contain properties about decoding, but not vice-versa)
+  - Example of a property of `encodeNoRun`
+    - Note: for the tutorial, we should have a stripped-down version of that function and remove properties outside of the example.<br/>
+    **/!\\** We also must be sure it verifies with Z3 (and not rely on CVC4)
+    - Property: essentially the "inverse" of `doDecodeNext`, and we are guaranteed to not get a "run chunk" back
+    - With a small amount of annotations, we can get that to verify
 
 ## Conclusion?
 
