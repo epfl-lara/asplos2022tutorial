@@ -20,8 +20,39 @@ To get the basic flavor of Stainless, you can also consult the documentation inc
 **Time:** Tuesday, March 1st, morning
 
 ## Setup
+- Make sure you have the following installed:
+    - JDK8 or higher
+    - GCC (needed later on)
+        - For macOS users: note that `gcc` is (usually) an alias for `clang`. One of our last example requires a crucial optimization that sadly the versions of `clang` we tried could not perform.\
+        If you have Homebrew, you can install `gcc` with `brew install gcc` (which may take some time).
+- Clone the tutorial repository anywhere you would like:
+    ```bash
+    git clone https://github.com/epfl-lara/asplos2022tutorial
+    ```
+- Download Stainless 0.9.2:
+    - [For Linux](https://github.com/epfl-lara/stainless/releases/download/v0.9.2/stainless-dotty-standalone-0.9.2-scala3-linux.zip)
+    - [For macOS](https://github.com/epfl-lara/stainless/releases/download/v0.9.2/stainless-dotty-standalone-0.9.2-scala3-mac.zip)
+    - [For Windows](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+- Unzip the downloaded file and move the folder within the `asplos2022tutorial` folder, previously cloned.\
+Rename `stainless-dotty-standalone-0.9.2-XYZ` to `stainless-standalone`.
+- To test the installation, navigate to `hello-stainless` and run the `verify` script.\
+You should obtain something like:
+```
+[  Info  ] Starting verification...
+[  Info  ] Verified: 1 / 1
+[  Info  ]   ┌───────────────────┐
+[  Info  ] ╔═╡ stainless summary ╞══════════════════════════════════════════════════════════════════════╗
+[  Info  ] ║ └───────────────────┘                                                                      ║
+[  Info  ] ║ HelloStainless.scala:5:7:      nonEmptyListSize    postcondition    valid   U:smt-z3   0.4 ║
+[  Info  ] ╟┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄╢
+[  Info  ] ║ total: 1    valid: 1    (0 from cache) invalid: 0    unknown: 0    time:     0.4           ║
+[  Info  ] ╚════════════════════════════════════════════════════════════════════════════════════════════╝
+[  Info  ] Shutting down executor service.
+```
 
-[Installation for Scala 3 front end version of Stainless](https://github.com/epfl-lara/stainless/blob/scala-3.x/core/src/sphinx/installation.rst)
+- If so, you are ready to go. Otherwise, do not hesitate to call us to figure out what went wrong!
+- (Optional) If you use VS Code, you may install the [Scala syntax highlighting plugin](https://marketplace.visualstudio.com/items?itemName=scala-lang.scala).\
+IntelliJ users may install the Scala plugin if they wish. However, as we do not use SBT (Scala Build Tool) for this tutorial, IntelliJ may struggle importing the projects.
 
 ## Program Schedule
 

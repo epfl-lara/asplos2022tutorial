@@ -1,7 +1,11 @@
-# Verifying Programs with Stainless
+# Building the site locally with Jekyll
 
-## About the tutorial
+Refer to [GitHub's guide](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll) to install Jekyll
 
-## Setup
+Once install, one can run the Jekyll site locally with
 
-## Program Schedule
+```bash
+bundle exec jekyll serve
+```
+
+and navigate to http://localhost:4000
