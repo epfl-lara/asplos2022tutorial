@@ -32,7 +32,7 @@ To get the basic flavor of Stainless, you can also consult the documentation inc
 - Download Stainless 0.9.2:
     - [For Linux](https://github.com/epfl-lara/stainless/releases/download/v0.9.2/stainless-dotty-standalone-0.9.2-scala3-linux.zip)
     - [For macOS](https://github.com/epfl-lara/stainless/releases/download/v0.9.2/stainless-dotty-standalone-0.9.2-scala3-mac.zip)
-    - [For Windows](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+    - For Windows (**WIP**)
 - Unzip the downloaded file and move the folder within the `asplos2022tutorial` folder, previously cloned.\
 Rename `stainless-dotty-standalone-0.9.2-XYZ` to `stainless-standalone`.
 - To test the installation, navigate to `hello-stainless` and run the `verify` script.\
