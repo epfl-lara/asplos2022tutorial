@@ -1,0 +1,6 @@
+genc/genc-qoibench
+genc/genc-qoiconv
+genc/stainless.c
+genc/stainless.h
+output/
+*.exe
