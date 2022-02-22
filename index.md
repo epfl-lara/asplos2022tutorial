@@ -22,24 +22,28 @@ To get the basic flavor of Stainless, you can also consult the documentation inc
 ## Setup
 - Make sure you have the following installed:
     - JDK8 or higher
+        - If you do not have Java installed, you can download the latest release (JDK 17) [here](https://www.oracle.com/java/technologies/downloads/)
     - For Windows users: [Cygwin](https://cygwin.com/install.html)\
-    When arriving at the package selections, select `git`, `gcc-core` and `make`.
+    When arriving at the package selections, select `gcc-core` and `make`.
     Once installed, you may launch a Cygwin terminal. All listed commands should be run in a Cygwin terminal.
     - GCC and Make
         - For Windows users: already installed along with Cygwin.
         - For macOS users: note that `gcc` is (usually) an alias for `clang`. One of our last examples requires a crucial optimization that sadly the versions of Clang we tried could not perform.\
-            If you have Homebrew, you can install GCC with `brew install gcc` (which may take some time).
+            With Homebrew, you can install GCC with `brew install gcc`.\
+            With MacPorts, GCC can be installed with `sudo port install gcc11`.\
+            In either case, the installation may take some time.
         - For Linux users: these should already be bundled.
 - Clone the tutorial repository anywhere you would like:
     ```bash
     git clone https://github.com/epfl-lara/asplos2022tutorial
     ```
-- Download Stainless 0.9.2:
-    - [For Linux](https://github.com/epfl-lara/stainless/releases/download/v0.9.2/stainless-dotty-standalone-0.9.2-scala3-linux.zip)
-    - [For macOS](https://github.com/epfl-lara/stainless/releases/download/v0.9.2/stainless-dotty-standalone-0.9.2-scala3-mac.zip)
-    - For Windows (**WIP**)
+    If you do not use Git, you can instead download the [archive](https://github.com/epfl-lara/asplos2022tutorial/archive/refs/heads/main.zip).
+- Download Stainless 0.9.3:
+    - [For Linux](https://github.com/epfl-lara/stainless/releases/download/v0.9.3/stainless-dotty-standalone-0.9.3-linux.zip)
+    - [For macOS](https://github.com/epfl-lara/stainless/releases/download/v0.9.3/stainless-dotty-standalone-0.9.3-mac.zip)
+    - [For Windows](https://github.com/epfl-lara/stainless/releases/download/v0.9.3/stainless-dotty-standalone-0.9.3-win.zip)
 - Unzip the downloaded file and move the folder within the `asplos2022tutorial` folder, previously cloned.\
-Rename `stainless-dotty-standalone-0.9.2-XYZ` to `stainless-standalone`.
+Rename `stainless-dotty-standalone-0.9.3-XYZ` to `stainless`.
 - To test the installation, navigate to `hello-stainless` and run the `verify.sh` script.
 You should obtain the following output:
 ```
