@@ -66,28 +66,12 @@ IntelliJ users may install the Scala plugin if they wish. However, as we do not 
 
 ## Program Schedule
 
-<!-- TODO
-- For "Verifying imperative code & proof control": In outline.md, this corresponds to "More examples"; is this an appropriate topic name?
-- Do we have a break between "How Stainless works" and "An Extended Verification Example" ?
--->
 
 | Time      | Topic                                      |
 |----------:|--------------------------------------------|
-| 9:00-10:00| Introduction & basics of Stainless         |
-|10:00-10:15| Break                                      |
-|10:15-11:00| Verifying imperative code & proof control  |
+|  9:00-9:45| Introduction & setup                       |
+| 9:45-11:00| Basics of Stainless & examples             |
 |11:00-11:30| Break                                      |
 |11:30-12:15| How Stainless works                        |
 |12:15-12:50| An Extended Verification Example           |
 |12:50-13:00| Conclusion                                 |
-
-<!--
-This is the old schedule
-| Time   | Topic                            |
-|--------|----------------------------------|
-|morning | Basics of Stainless              |
-|        | Verifying imperative code        |
-|        | Proof control                    |
-|        | An Extended Verification Example |
-|        | Features, Tips, and Case Studies |
--->
