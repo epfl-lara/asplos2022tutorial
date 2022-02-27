@@ -1,6 +1,6 @@
 # Quite OK Image case study
 
-For this last exercise, we will interest ourselves in verifying some properties on a Scala implementation of the "Quite OK Image" (QOI) lossless compression algorithm.
+We will interest ourselves in verifying some properties on a Scala implementation of the "Quite OK Image" (QOI) lossless compression algorithm.
 
 Furthermore, we will run the GenC pipeline of Stainless to transpile the Scala code into C. We will then compare the performance of the generated C to the reference implementation.
 
@@ -26,20 +26,18 @@ We iterate over all pixels and encode a visited pixel in one of the following fo
 Decompression is single-pass as well. It maintains the same values as the compression counterpart, and iterates over all encoded chunks and applies the reverse transformation.
 
 ## Directory structure
-**TODO**
-
-## Exercise: verifying the reciprocity of cases B, C and D
-**TODO**
-
-## Emitting C from Scala code with GenC
-**TODO**
+* The Scala implementation is included in `scala`.
+The `verify.sh` script executes Stainless to verify the functions discussed in the slides (in particular, `encodeNoRun` and its reciprocity with respect to `doDecodeNext`)
+* The `genc` folder includes a Makefile to transpile Scala into C through Stainless.\
+`test-genc.sh` is a simple scripts that performs PNG<->QOI conversions with the 3 images in `images` and write the results to an `output` folder.\
+The script `run-bench.sh` executes a benchmark to measure the performance of the reference implementation, the transpiled C, as well as PNG encoding/decoding (using the image library `stb_image`).
+* Finally, the `images` folder contains 3 sample images in PNG and QOI formats.
 
 ## Aside: fully verified?
 
-As you may have guessed, the case study here does not contain all proof annotations needed to conclude that the algorithm is correct (namely, that decoding is the inverse of encoding).
+As you may have guessed, the case study here does not contain all proof annotations needed to conclude that the algorithm is correct (namely, that decoding is the inverse of encoding - here, we only have shown reciprocity for a subset of cases).
 Besides, if we run Stainless on all functions, it will report counter-examples for most of them because their contracts (in particular, preconditions) are not entirely specified.
 
-We however do have a version with all proof annotations:
-https://github.com/epfl-lara/verified-qoi
+We however do have a version with all proof annotations: https://github.com/epfl-lara/verified-qoi
 
 We have stripped the full version from all of its annotations for the needs of the tutorial, and have adjusted it to not use Scala-specific features.
