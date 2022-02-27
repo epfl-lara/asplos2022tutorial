@@ -3,4 +3,4 @@
 # kill subprocesses on exit or kill
 trap '[ -n "$(jobs -pr)" ] && kill -9 $(jobs -pr)' SIGINT SIGTERM EXIT
 
-../stainless/stainless.sh SPixel.scala "$@"
+../stainless/stainless.sh common.scala "$@"
