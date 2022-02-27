@@ -61,8 +61,7 @@ To get the basic flavor of Stainless, you can also consult the documentation inc
     - [For Linux](https://github.com/epfl-lara/stainless/releases/download/v0.9.3/stainless-dotty-standalone-0.9.3-linux.zip)
     - [For macOS](https://github.com/epfl-lara/stainless/releases/download/v0.9.3/stainless-dotty-standalone-0.9.3-mac.zip)
     - [For Windows](https://github.com/epfl-lara/stainless/releases/download/v0.9.3/stainless-dotty-standalone-0.9.3-win.zip)
-- Unzip the downloaded file and move the folder within the `asplos2022tutorial` folder, previously cloned.\
-Rename `stainless-dotty-standalone-0.9.3-XYZ` to `stainless`.
+- Create a folder `stainless` under `asplos2022tutorial` and unzip the downloaded Stainless 0.9.3 zip file into it. The script `asplos2022tutorial/stainless/stainless.sh` invokes stainless verification tool.
 - To test the installation, navigate to `hello-stainless` and run the `verify.sh` script.
 You should obtain the following output:
 ```
@@ -77,8 +76,21 @@ You should obtain the following output:
 [  Info  ] ╚════════════════════════════════════════════════════════════════════════════════════════════╝
 [  Info  ] Shutting down executor service.
 ```
-    (On Windows, some symbols may appear as `?`)
 
-- If so, you are ready to go. Otherwise, do not hesitate to call us to figure out what went wrong!
+If symbols like ╚,═ or colors do not work in your terminal, just use option ``--no-colors`` on all stainless invocations. This will emit pure ASCII output on Linux (adapt to Windows using \ instead of / , as needed):
+```
+~/asplos2022tutorial/00-hello-stainless$ ../stainless/stainless.sh --no-colors HelloStainless.scala
+Starting verification...
+Verified: 1 / 1
+  
+ stainless summary 
+                                                                       
+HelloStainless.scala:5:7:     nonEmptyListSize   postcondition   valid from cache      0.1 
+............................................................................................
+total: 1    valid: 1    (1 from cache) invalid: 0    unknown: 0    time:     0.1           
+
+Shutting down executor service.
+```
+
 - (Optional) If you use VS Code, you may install the [Scala syntax highlighting plugin](https://marketplace.visualstudio.com/items?itemName=scala-lang.scala).\
 IntelliJ users may install the Scala plugin if they wish. However, as we do not use SBT (Scala Build Tool) for this tutorial, IntelliJ may struggle to import the projects.
