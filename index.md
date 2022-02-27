@@ -1,5 +1,10 @@
 # Verifying Programs with Stainless
 
+## Location and date
+**Location:** Zoom (link available to participants), and physically in [Swiss Tech Convention Center](https://www.stcc.ch/) near the campus of EPFL in Lausanne, Switzerland ([M1 Metro stop EPFL](https://goo.gl/maps/A3Sm4VGxWsoPrzX27))
+
+**Time:** Tuesday, March 1st, at 09:00am-13:00 Lausanne (and Paris and Zurich) time zone
+
 ## About the tutorial
 [Stainless](https://stainless.epfl.ch/) is an [open-source system](https://github.com/epfl-lara/stainless) for constructing formally-verified software
 that is guaranteed to meet specifications for all inputs.
@@ -12,12 +17,26 @@ series of guided examples. We will assume only basic programming skills; no
 particular background in verification or Scala is required, though a basic
 understanding of functional programming concepts will be helpful.
 
+
 To get the basic flavor of Stainless, you can also consult the documentation including [this basic tutorial](https://epfl-lara.github.io/stainless/tutorial.html) or [watch a keynote from Lambda Days](https://www.youtube.com/watch?v=dkO59PTcNxA). The tutorial will also cover examples not presented previously that illustrate some of the recent features.
 
-## Location and date
-**Location:** [Swiss Tech Convention Center](https://www.stcc.ch/) near the campus of EPFL in Lausanne, Switzerland ([M1 Metro stop EPFL](https://goo.gl/maps/A3Sm4VGxWsoPrzX27))
+## Program Schedule
 
-**Time:** Tuesday, March 1st, at 9:00am
+
+| Time      | Topic                                      |
+|----------:|--------------------------------------------|
+|  9:00-9:45| Introduction & setup                       |
+| 9:45-11:00| Basics of Stainless & examples             |
+|11:00-11:30| Break                                      |
+|11:30-12:15| How Stainless works                        |
+|12:15-12:50| An Extended Verification Example           |
+|12:50-13:00| Conclusion                                 |
+
+# More in-depth resources:
+
+- [Stainless documentation](https://epfl-lara.github.io/stainless/)
+- [System FR: Formalized Foundations for the Stainless Verifier](http://lara.epfl.ch/~kuncak/papers/HamzaETAL19SystemFR.pdf), OOPSLA 2019
+- [Verified Functional Programming](http://dx.doi.org/10.5075/epfl-thesis-9479), EPFL PhD thesis of Nicolas Voirol, 2019
 
 ## Setup
 - Make sure you have the following installed:
@@ -63,15 +82,3 @@ You should obtain the following output:
 - If so, you are ready to go. Otherwise, do not hesitate to call us to figure out what went wrong!
 - (Optional) If you use VS Code, you may install the [Scala syntax highlighting plugin](https://marketplace.visualstudio.com/items?itemName=scala-lang.scala).\
 IntelliJ users may install the Scala plugin if they wish. However, as we do not use SBT (Scala Build Tool) for this tutorial, IntelliJ may struggle to import the projects.
-
-## Program Schedule
-
-
-| Time      | Topic                                      |
-|----------:|--------------------------------------------|
-|  9:00-9:45| Introduction & setup                       |
-| 9:45-11:00| Basics of Stainless & examples             |
-|11:00-11:30| Break                                      |
-|11:30-12:15| How Stainless works                        |
-|12:15-12:50| An Extended Verification Example           |
-|12:50-13:00| Conclusion                                 |
