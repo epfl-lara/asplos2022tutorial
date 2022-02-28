@@ -18,7 +18,7 @@ particular background in verification or Scala is required, though a basic
 understanding of functional programming concepts will be helpful.
 
 
-To get the basic flavor of Stainless, you can also consult the documentation including [this basic tutorial](https://epfl-lara.github.io/stainless/tutorial.html) or [watch a keynote from Lambda Days](https://www.youtube.com/watch?v=dkO59PTcNxA). The tutorial will also cover examples not presented previously that illustrate some of the recent features.
+To get the basic flavor of Stainless, you can also consult the documentation including [this basic tutorial](https://epfl-lara.github.io/stainless/tutorial.html) or [watch a keynote from Lambda Days](https://www.youtube.com/watch?v=dkO59PTcNxA) or a different and shorter [tutorial at FMCAD 2021](https://github.com/epfl-lara/fmcad2021tutorial/) including [a video](https://tube.switch.ch/videos/bFOnl6Emmp). The tutorial will also cover examples not presented previously that illustrate some of the recent features.
 
 ## Program Schedule
 
