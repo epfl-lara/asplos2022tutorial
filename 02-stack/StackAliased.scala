@@ -32,14 +32,12 @@ object StackAliasedExample {
                        list == old(list).tail)
   }
 
-  // The function below fails to verify, because s1 and s2 may point to
+  // Unless we require s1 != s2, the function below fails to verify, because s1 and s2 may point to
   // the same Stack, in which case the second call to pop might fail.
-/*
   def popBoth[T](s1: Stack[T], s2: Stack[T]): (T, T) = {
     reads(Set(s1, s2))
     modifies(Set(s1, s2))
-    require(!s1.list.isEmpty && !s2.list.isEmpty)
+    require(s1 != s2 && !s1.list.isEmpty && !s2.list.isEmpty)
     (s1.pop, s2.pop)
   }
-*/
 }
