@@ -37,6 +37,7 @@ To get the basic flavor of Stainless, you can also consult the documentation inc
 - [Stainless documentation](https://epfl-lara.github.io/stainless/)
 - [System FR: Formalized Foundations for the Stainless Verifier](http://lara.epfl.ch/~kuncak/papers/HamzaETAL19SystemFR.pdf), OOPSLA 2019
 - [Verified Functional Programming](http://dx.doi.org/10.5075/epfl-thesis-9479), EPFL PhD thesis of Nicolas Voirol, 2019
+- [verified-qoi](https://github.com/epfl-lara/verified-qoi), the full version of the QOI case study
 
 ## Setup
 - Make sure you have the following installed:
@@ -82,12 +83,12 @@ If symbols like ╚,═ or colors do not work in your terminal, just use option 
 ~/asplos2022tutorial/00-hello-stainless$ ../stainless/stainless.sh --no-colors HelloStainless.scala
 Starting verification...
 Verified: 1 / 1
-  
- stainless summary 
-                                                                       
-HelloStainless.scala:5:7:     nonEmptyListSize   postcondition   valid from cache      0.1 
+
+ stainless summary
+
+HelloStainless.scala:5:7:     nonEmptyListSize   postcondition   valid from cache      0.1
 ............................................................................................
-total: 1    valid: 1    (1 from cache) invalid: 0    unknown: 0    time:     0.1           
+total: 1    valid: 1    (1 from cache) invalid: 0    unknown: 0    time:     0.1
 
 Shutting down executor service.
 ```
