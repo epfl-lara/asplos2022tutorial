@@ -19,3 +19,6 @@ case class Stack[T](private var data: List[T])
     res == old(this).list.head &&
     list == old(this).list.tail)
 }
+object Stack {
+  def empty[T]() = Stack[T](List[T]())
+}
