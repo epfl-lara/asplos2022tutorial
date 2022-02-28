@@ -40,4 +40,19 @@ object StackAliasedExample {
     require(s1 != s2 && !s1.list.isEmpty && !s2.list.isEmpty)
     (s1.pop, s2.pop)
   }
+
+  def pushTwoPopTwo(s1: Stack[Int], s2: Stack[Int]): Unit = {
+    reads(Set(s1, s2))
+    modifies(Set(s1, s2))
+    s1.push(1)
+    s2.push(2)
+    s1.pop
+    s2.pop
+    ()
+  }
+  def callTwoStacks(st: Stack[Int]): Unit = {
+    reads(Set(st))
+    modifies(Set(st))
+    pushTwoPopTwo(st, st)
+  }
 }

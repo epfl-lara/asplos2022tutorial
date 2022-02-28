@@ -22,3 +22,25 @@ case class Stack[T](private var data: List[T])
 object Stack {
   def empty[T]() = Stack[T](List[T]())
 }
+object TestStack {
+  def pushTwo(s: Stack[Int], a: Int, b: Int) = {
+    s.push(a)
+    s.push(b)
+    s.pop
+  } ensuring(res => res == b)
+  
+  def pushTwoPopTwo(s1: Stack[Int], s2: Stack[Int]): Unit = {
+    s1.push(1)
+    s2.push(2)
+    s1.pop
+    s2.pop
+    ()
+  }
+  
+  // Not allowed in default imperative as we use aliased parameters
+  /*
+  def callTwoStacks(s: Stack[Int]): Unit = {
+    pushTwoPopTwo(s, s)
+  }
+  */
+}
