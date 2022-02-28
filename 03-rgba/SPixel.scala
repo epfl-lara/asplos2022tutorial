@@ -34,4 +34,3 @@ object Pixel {
     @cCode.`export`
     def example = g(fromRgba(10,20,-128,0))
 }
-

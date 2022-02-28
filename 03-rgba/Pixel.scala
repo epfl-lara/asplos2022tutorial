@@ -12,10 +12,13 @@ object Pixel {
       (r << 24) | (g << 16) | (b << 8) | a
     }.ensuring(res => Pixel.r(res) == r && Pixel.g(res) == g && Pixel.b(res) == b && Pixel.a(res) == a)
 
-    // Above is wrong because the sub-expressions (g << 16), etc. get promoted to Int and are sign-extended.
-    
+    def example01 = g(fromRgba0(10,20,30,0))
+
+    // correct version
     def fromRgba(r: Byte, g: Byte, b: Byte, a: Byte): Int = {
       (r << 24) | ((g << 16) & 0xffffff) | ((b << 8) & 0xffff) | (a & 0xff)
     }.ensuring(res => Pixel.r(res) == r && Pixel.g(res) == g && Pixel.b(res) == b && Pixel.a(res) == a) 
+
+    def example1 = g(fromRgba(10,20,30,0))
 }
 
