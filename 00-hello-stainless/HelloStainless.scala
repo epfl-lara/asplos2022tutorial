@@ -5,5 +5,5 @@ object HelloStainless {
   def nonEmptyListSize(l: List[String]): BigInt = {
     require(l.nonEmpty)
     l.size
-  }.ensuring(size => size > 0)
+  }.ensuring(res => res > 0)
 }
