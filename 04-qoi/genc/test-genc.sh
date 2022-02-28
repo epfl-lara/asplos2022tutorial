@@ -3,18 +3,25 @@
 make genc-qoiconv
 mkdir -p ../output
 
-# Encoding
-./genc-qoiconv ../images/Central_Bern_from_north.png ../output/Central_Bern_from_north.qoi
-cmp -l ../images/Central_Bern_from_north.qoi ../output/Central_Bern_from_north.qoi
+# Encoding (decoding .png into raw pixels and encoding these raw pixels to .qoi)
+for i in ../images/*.png; do
+    [ -f "$i" ] || break
+    filename=$(basename -- "$i")
+    filename="${filename%.*}"
 
-./genc-qoiconv ../images/Chocolate_Hills_overview.png ../output/Chocolate_Hills_overview.qoi
-cmp -l ../images/Chocolate_Hills_overview.qoi ../output/Chocolate_Hills_overview.qoi
+    ./genc-qoiconv "$i" "../output/$filename.qoi"
+    cmp -l "../images/$filename.qoi" "../output/$filename.qoi"
+    if [[ "$?" = 0 ]]; then
+        echo "../images/$filename.qoi and ../output/$filename.qoi are the same"
+    fi
+    # else: cmp -l will print a message saying otherwise
+done
 
-./genc-qoiconv ../images/Eyjafjallajokull_sous_les_aurores_boreales.png ../output/Eyjafjallajokull_sous_les_aurores_boreales.qoi
-cmp -l ../images/Eyjafjallajokull_sous_les_aurores_boreales.qoi ../output/Eyjafjallajokull_sous_les_aurores_boreales.qoi
+# Decoding (decoding .qoi into raw pixels and encoding these raw pixels into .png)
+for i in ../images/*.qoi; do
+    [ -f "$i" ] || break
+    filename=$(basename -- "$i")
+    filename="${filename%.*}"
 
-
-# Decoding
-./genc-qoiconv ../images/Central_Bern_from_north.qoi ../output/Central_Bern_from_north.png
-./genc-qoiconv ../images/Chocolate_Hills_overview.qoi ../output/Chocolate_Hills_overview.png
-./genc-qoiconv ../images/Eyjafjallajokull_sous_les_aurores_boreales.qoi ../output/Eyjafjallajokull_sous_les_aurores_boreales.png
+    ./genc-qoiconv "../images/$filename.qoi" "../output/$filename.png"
+done
