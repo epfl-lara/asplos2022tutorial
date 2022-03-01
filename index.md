@@ -22,11 +22,12 @@ To get the basic flavor of Stainless, you can also consult the documentation inc
 
 ## Program Schedule
 
+[Click here for the slides](https://docs.google.com/presentation/d/1Bw56NKnWJz-anuTDpYzGlMuxZS0wFB6GptDFrcQdfuY/edit?usp=sharing)
 
 | Time      | Topic                                      |
 |----------:|--------------------------------------------|
-|  9:00-9:45| Introduction & setup                       |
-| 9:45-11:00| Basics of Stainless & examples             |
+|  9:00-9:45| Part 1: Introduction (Georg S Schmid)      |
+| 9:45-11:00| Part 2: Using stainless ([video](https://tube.switch.ch/videos/vbYr4RfXgr)) |
 |11:00-11:30| Break                                      |
 |11:30-12:15| How Stainless works                        |
 |12:15-12:50| An Extended Verification Example           |
