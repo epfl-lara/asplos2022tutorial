@@ -26,11 +26,11 @@ To get the basic flavor of Stainless, you can also consult the documentation inc
 
 | Time      | Topic                                      |
 |----------:|--------------------------------------------|
-|  9:00-9:45| Part 1: Introduction (Georg S Schmid, [video](https://tube.switch.ch/videos/3EithGWw56))          |
-| 9:45-11:00| Part 2: Using stainless (Viktor Kuncak, [video](https://tube.switch.ch/videos/vbYr4RfXgr))        |
+|  9:00-9:45| Part 1: Introduction (Georg S Schmid, [video](https://tube.switch.ch/videos/3EithGWw56))                  |
+| 9:45-11:00| Part 2: Using stainless (Viktor Kuncak, [video](https://tube.switch.ch/videos/vbYr4RfXgr))                |
 |11:00-11:30| Break                                      |
-|11:30-12:15| How Stainless works (Nicolas Voirol, [video](https://tube.switch.ch/videos/fQGpcbxKcs))           |
-|12:15-12:50| An Extended Verification Example (Mario Bucev, [video](https://tube.switch.ch/videos/bFKnOEBa8Y)) |
+|11:30-12:15| Part 3: How Stainless works (Nicolas Voirol, [video](https://tube.switch.ch/videos/fQGpcbxKcs))           |
+|12:15-12:50| Part 4: An Extended Verification Example (Mario Bucev, [video](https://tube.switch.ch/videos/bFKnOEBa8Y)) |
 |12:50-13:00| Conclusion                                 |
 
 # More in-depth resources:
