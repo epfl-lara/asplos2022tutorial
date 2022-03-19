@@ -1,24 +1,17 @@
 # Verifying Programs with Stainless
 
-## Location and date
-**Location:** Zoom (link available to participants), and physically in [Swiss Tech Convention Center](https://www.stcc.ch/) near the campus of EPFL in Lausanne, Switzerland ([M1 Metro stop EPFL](https://goo.gl/maps/A3Sm4VGxWsoPrzX27))
-
-**Time:** Tuesday, March 1st, at 09:00am-13:00 Lausanne (and Paris and Zurich) time zone
-
-## About the tutorial
 [Stainless](https://stainless.epfl.ch/) is an [open-source system](https://github.com/epfl-lara/stainless) for constructing formally-verified software
 that is guaranteed to meet specifications for all inputs.
 The primary input format to Stainless is a subset of [Scala](https://www.scala-lang.org/).
 In addition, programs designed to run with pre-allocated memory (e.g., on an embedded system)
 can be translated to C and processed using conventional C compilers.
 
-This tutorial will provide a hands-on introduction to Stainless through a
+## About the tutorial
+
+This tutorial provides a hands-on introduction to Stainless through a
 series of guided examples. We will assume only basic programming skills; no
 particular background in verification or Scala is required, though a basic
 understanding of functional programming concepts will be helpful.
-
-
-To get the basic flavor of Stainless, you can also consult the documentation including [this basic tutorial](https://epfl-lara.github.io/stainless/tutorial.html) or [watch a keynote from Lambda Days](https://www.youtube.com/watch?v=dkO59PTcNxA) or a different and shorter [tutorial at FMCAD 2021](https://github.com/epfl-lara/fmcad2021tutorial/) including [a video](https://tube.switch.ch/videos/bFOnl6Emmp). The tutorial will also cover examples not presented previously that illustrate some of the recent features.
 
 ## Program Schedule
 
@@ -26,20 +19,21 @@ To get the basic flavor of Stainless, you can also consult the documentation inc
 
 | Time      | Topic                                      |
 |----------:|--------------------------------------------|
-|  9:00-9:45| Part 1: Introduction (Georg S Schmid, [video](https://tube.switch.ch/videos/3EithGWw56))                  |
-| 9:45-11:00| Part 2: Using stainless (Viktor Kuncak, [video](https://tube.switch.ch/videos/vbYr4RfXgr))                |
-|11:00-11:30| Break                                      |
+|  9:00-9:45| Part 1: Introduction (Georg S. Schmid, [video](https://tube.switch.ch/videos/3EithGWw56))                  |
+| 9:45-11:00| Part 2: Using stainless (Viktor Kunčak, [video](https://tube.switch.ch/videos/vbYr4RfXgr))                |
 |11:30-12:15| Part 3: How Stainless works (Nicolas Voirol, [video](https://tube.switch.ch/videos/fQGpcbxKcs))           |
-|12:15-12:50| Part 4: An Extended Verification Example (Mario Bucev, [video](https://tube.switch.ch/videos/bFKnOEBa8Y)) |
-|12:50-13:00| Conclusion                                 |
+|12:15-12:50| Part 4: An Extended Verification Example (Mario Bucev, [video](https://tube.switch.ch/videos/bFKnOEBa8Y)) |                    |
 
 # More in-depth resources:
 
-- [Stainless documentation](https://epfl-lara.github.io/stainless/)
-- [System FR: Formalized Foundations for the Stainless Verifier](http://lara.epfl.ch/~kuncak/papers/HamzaETAL19SystemFR.pdf), OOPSLA 2019
+- [Stainless documentation](https://epfl-lara.github.io/stainless/) including the [basic mini tutorial](https://epfl-lara.github.io/stainless/tutorial.html)
 - [Verified Functional Programming](http://dx.doi.org/10.5075/epfl-thesis-9479), EPFL PhD thesis of Nicolas Voirol, 2019
+- [Formal Verification Course](https://tube.switch.ch/channels/f2d4e01d) taught by LARA group at EPFL
+- [System FR: Formalized Foundations for the Stainless Verifier](http://lara.epfl.ch/~kuncak/papers/HamzaETAL19SystemFR.pdf), OOPSLA 2019
 - [verified-qoi](https://github.com/epfl-lara/verified-qoi), the full version of the QOI case study!
 - [On Verified Scala for STIX File System Embedded Code using Stainless](https://infoscience.epfl.ch/record/292424?&ln=en)
+
+For high-level overview you can also [watch a keynote from Lambda Days](https://www.youtube.com/watch?v=dkO59PTcNxA) or check a different and shorter [tutorial at FMCAD 2021](https://github.com/epfl-lara/fmcad2021tutorial/) including [a video](https://tube.switch.ch/videos/bFOnl6Emmp).
 
 ## Setup
 - Make sure you have the following installed:
@@ -79,21 +73,7 @@ asplos2022tutorial
 └── ...
 ```
 
-- To test the installation, navigate to `00-hello-stainless` and run the `verify.sh` script.
-You should obtain the following output:
-```
-[  Info  ] Starting verification...
-[  Info  ] Verified: 1 / 1
-[  Info  ]   ┌───────────────────┐
-[  Info  ] ╔═╡ stainless summary ╞══════════════════════════════════════════════════════════════════════╗
-[  Info  ] ║ └───────────────────┘                                                                      ║
-[  Info  ] ║ HelloStainless.scala:5:7:      nonEmptyListSize    postcondition    valid   U:smt-z3   0.4 ║
-[  Info  ] ╟┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄╢
-[  Info  ] ║ total: 1    valid: 1    (0 from cache) invalid: 0    unknown: 0    time:     0.4           ║
-[  Info  ] ╚════════════════════════════════════════════════════════════════════════════════════════════╝
-[  Info  ] Shutting down executor service.
-```
-If symbols like ╚,═ or colors do not work in your terminal, just use option ``--no-colors`` on all Stainless invocations. This will emit pure ASCII output on Linux (adapt to Windows using \ instead of / , as needed):
+- To test the installation, navigate to `00-hello-stainless` and run the `verify.sh` script or invoke `stainless.sh` on `HelloStainless.scala` (in this case with `--no-colors` option for 7-bit ASCII output):
 
     ```
     ~/asplos2022tutorial/00-hello-stainless$ ../stainless/stainless.sh --no-colors HelloStainless.scala
@@ -111,3 +91,7 @@ If symbols like ╚,═ or colors do not work in your terminal, just use option 
 
 - (Optional) If you use VS Code, you may install the [Scala syntax highlighting plugin](https://marketplace.visualstudio.com/items?itemName=scala-lang.scala).\
 IntelliJ users may install the Scala plugin if they wish. However, as we do not use SBT (Scala Build Tool) for this tutorial, IntelliJ may struggle to import the projects.
+
+## Live tutorial for which this content was created
+
+The tutorial was originally given as part of ASPLOS 2022 conference on Tuesday, March 1st, at 09:00am-13:00 Lausanne (and Paris and Zurich) time zone. It was available on zoom as well as physically in [Swiss Tech Convention Center](https://www.stcc.ch/) near the campus of EPFL in Lausanne, Switzerland ([M1 Metro stop EPFL](https://goo.gl/maps/A3Sm4VGxWsoPrzX27))
