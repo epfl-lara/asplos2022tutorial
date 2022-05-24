@@ -6,3 +6,6 @@ To install Stainless and its requirements, please refer to https://epfl-lara.git
 Do not hesitate to call us for any questions.
 
 Happy hacking!
+
+## Further examples
+The [Bolts](https://github.com/epfl-lara/bolts) repository contains many more examples of what Stainless can verify.
